@@ -10,6 +10,14 @@
                 height: auto;
             }
         </style>
+        <script src="https://unpkg.com/@jessitronica/hny-otel-web@0.9.0/dist/hny.js"></script>
+        <script>
+          window.Hny.initializeTracing({
+            debug: true,
+            apiKey: "your-honeycomb-ingest-api-key",
+            serviceName: "my-app",
+          });
+        </script>
     </head>
     <body>
         <p>
