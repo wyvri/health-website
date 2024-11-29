@@ -12,6 +12,7 @@ svg {
     z-index: 1;
     position: absolute;
     font-family: Helvetica, sans-serif;
+    display: none;
 }
 
 .top-organ-box {
