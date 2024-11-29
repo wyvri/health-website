@@ -11,4 +11,25 @@ svg {
     height: 20vw;
     z-index: 1;
     position: absolute;
+    font-family: Helvetica, sans-serif;
+}
+
+.top-organ-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.organ-box button {
+    background-color: rgb(108, 108, 108);
+    color: white;
+    height: 20px;
+}
+
+.organ-box .organ-name {
+    margin: 2px;
+}
+
+.organ-box .organ-text {
+    margin: 2px;
+    font-size: smaller;
 }
