@@ -1,4 +1,14 @@
 svg {
     width: 100%;
     height: auto;
+    z-index: 0;
+}
+
+.organ-box {
+    border: 5px outset black;
+    background-color: gray;
+    width: 250px;
+    height: 20vw;
+    z-index: 1;
+    position: absolute;
 }
