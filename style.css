@@ -1,36 +1,78 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 svg {
-    width: 100%;
-    height: auto;
-    z-index: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
 }
 
 .organ-box {
-    border: 5px outset black;
-    background-color: gray;
-    width: 250px;
-    height: 20vw;
-    z-index: 1;
-    position: absolute;
-    font-family: Helvetica, sans-serif;
-    display: none;
+  border: 5px outset rgb(154, 104, 82);
+  background-color: rgb(203, 177, 166);
+  width: 250px;
+  z-index: 1;
+  position: absolute;
+  font-family: Helvetica, sans-serif;
+  padding: 3px;
+  /* display: none; */
 }
 
 .top-organ-box {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .organ-box button {
-    background-color: rgb(108, 108, 108);
-    color: white;
-    height: 20px;
-}
-
-.organ-box .organ-name {
-    margin: 2px;
+  background-color: rgb(147, 111, 95);
+  border: solid 2px rgb(100, 71, 58);
+  color: white;
+  height: 20px;
 }
 
 .organ-box .organ-text {
-    margin: 2px;
-    font-size: smaller;
+  font-size: smaller;
+  margin-left: 5px;
+}
+
+.organ-text-area {
+  display: block;
+  field-sizing: content;
+  font-family: inherit;
+  font-size: smaller;
+}
+
+/* https://chriscoyier.net/2023/09/29/css-solves-auto-expanding-textareas-probably-eventually/ */
+.grow-wrap {
+    margin-top: 20px;
+  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+  display: grid;
+}
+.grow-wrap::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) " ";
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+.grow-wrap > textarea {
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+
+  /* Firefox shows scrollbar on growth, you can hide like this. */
+  overflow: hidden;
+}
+.grow-wrap > textarea,
+.grow-wrap::after {
+  /* Identical styling required!! */
+  border: 1px solid black;
+  padding: 0.5rem;
+  font: inherit;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
 }
