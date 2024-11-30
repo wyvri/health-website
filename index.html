@@ -6,11 +6,14 @@
     <script src="https://unpkg.com/@jessitronica/hny-otel-web@0.10.1/dist/hny.js"></script>
     <script>
       window.Hny.initializeTracing({
-        debug: true,
+        debug: false,
         apiKey:
           "hcaik_01jdqv4jtn9kwsj2tmn3dwhz3hvdcqf9k7sf8dyph2hbqrvkv81rwvkk1g",
         serviceName: "website",
       });
+      console.log(
+        "Find observability data here: https://ui.honeycomb.io/logical-validity/environments/health-website/datasets/website/home"
+      );
     </script>
     <script src="index.js" defer></script>
   </head>
@@ -19,14 +22,10 @@
     <p>Click where it hurts.</p>
     <div id="brain-box" class="organ-box">
       <div class="top-organ-box">
-      <span class="organ-name">
-        Brain:
-      </span>
-      <button id="close-box-button">x</button>
-    </div>
-      <span class="organ-text">
-        brain blah blah
-      </span>
+        <span class="organ-name"> Brain: </span>
+        <button id="close-box-button">x</button>
+      </div>
+      <span class="organ-text"> brain blah blah </span>
     </div>
     <div id="body-img">
       <?xml version="1.0" encoding="UTF-8"?>
