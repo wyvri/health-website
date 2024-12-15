@@ -1,5 +1,6 @@
 body {
   font-family: Helvetica, sans-serif;
+  margin: 0px;
 }
 
 svg {
@@ -8,15 +9,32 @@ svg {
   z-index: 0;
 }
 
+.organ-box-outer {
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 100%;
+}
+
 .organ-box {
   border: 5px outset rgb(154, 104, 82);
   background-color: rgb(203, 177, 166);
   width: 250px;
   z-index: 1;
-  position: absolute;
   font-family: Helvetica, sans-serif;
   padding: 3px;
+  margin-left: 10px;
   /* display: none; */
+}
+
+@media (width <= 768px) {
+  .organ-box {
+    width: 90%;
+    margin: auto; 
+  }
+}
+
+.top-line-instruction {
+  margin-inline-start: 5px;
 }
 
 .top-organ-box {
