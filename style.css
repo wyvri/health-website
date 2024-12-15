@@ -18,16 +18,19 @@ svg {
 .organ-box {
   border: 5px outset rgb(154, 104, 82);
   background-color: rgb(203, 177, 166);
-  width: 250px;
+  min-width: 250px;
+  max-width: 500px;
   z-index: 1;
   font-family: Helvetica, sans-serif;
   padding: 3px;
   margin-left: 10px;
-  display: none;
+  /* display: none; */
 }
 
 @media (width <= 768px) {
   .organ-box {
+    min-width: unset;
+    max-width: unset;
     width: 90%;
     margin: auto; 
   }
