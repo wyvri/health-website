@@ -36,6 +36,8 @@ export_button.onclick = reportClick("click export", (event) => {
   export_text.value = gatherInput();
 });
 
-function gatherInput(){
-  return ":)"
+function gatherInput() {
+  const text_to_gather = document.getElementsByClassName("organ-text-area");
+  const texts = Array.from(text_to_gather).map((t) => t.value);
+  return texts.join("\n");
 }
