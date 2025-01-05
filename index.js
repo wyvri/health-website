@@ -38,6 +38,14 @@ export_button.onclick = reportClick("click export", (event) => {
 
 function gatherInput() {
   const text_to_gather = document.getElementsByClassName("organ-text-area");
-  const texts = Array.from(text_to_gather).map((t) => t.value);
+  const texts = Array.from(text_to_gather).map((t) => "Brain: " + t.value);
   return texts.join("\n");
 }
+
+const copy_button = document.getElementById("copy-btn");
+copy_button.onclick = reportClick("click copy", (event) => {
+  const export_text = document.getElementById("gathered-text");
+  const copy_text = export_text.value;
+  console.log("Copying", copy_text);
+  navigator.clipboard.writeText(copy_text);
+});
