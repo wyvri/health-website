@@ -23,3 +23,8 @@ x_button.onclick = reportClick("close brain box", (event) => {
   const box_to_close = event.target.closest(".organ-box");
   box_to_close.style.display = "none";
 });
+
+const export_button = document.getElementById("export-btn");
+export_button.onclick = reportClick("click export", (event) => {
+  console.log("you exported!")
+});
