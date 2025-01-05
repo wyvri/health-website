@@ -127,4 +127,14 @@ main {
 #export-box h4 {
   margin-top: 0px;
   margin-bottom: 10px;
+  display: inline;
+}
+
+#export-box-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#export-box button {
+  height: 20px;
 }
