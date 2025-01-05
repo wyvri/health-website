@@ -130,6 +130,10 @@ main {
   display: inline;
 }
 
+#export-box input {
+  margin-bottom: 10px;
+}
+
 #export-box-top {
   display: flex;
   justify-content: space-between;

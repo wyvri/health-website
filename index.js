@@ -32,4 +32,10 @@ export_button.onclick = reportClick("click export", (event) => {
   console.log("you exported!");
   const box_to_open = document.getElementById("export-box");
   box_to_open.style.display = "block";
+  const export_text = document.getElementById("gathered-text");
+  export_text.value = gatherInput();
 });
+
+function gatherInput(){
+  return ":)"
+}
