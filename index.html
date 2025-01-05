@@ -29,8 +29,12 @@
           <h4>Export:</h4>
           <button class="close-box-button">x</button>
         </div>
-        <div id="export-box-middle">
-          <input type="textarea" id="gathered-text"/>
+        <div id="export-box-middle" class="grow-wrap">
+          <textarea
+            id="gathered-text"
+            onInput="this.parentNode.dataset.replicatedValue = this.value"
+          >
+          </textarea>
         </div>
         <button id="copy-btn">Copy</button>
         <button id="download-btn">Download</button>

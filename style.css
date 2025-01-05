@@ -142,3 +142,8 @@ main {
 #export-box button {
   height: 20px;
 }
+
+.grow-wrap input {
+  display: block;
+  field-sizing: content;
+}
