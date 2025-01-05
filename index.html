@@ -24,18 +24,21 @@
       <button id="export-btn">Export</button>
     </header>
     <main>
-      <div id="export-box">
-        <h4>Export:</h4>
+      <div id="export-box" class="close-this-box">
+        <div id="export-box-top">
+          <h4>Export:</h4>
+          <button class="close-box-button">x</button>
+        </div>
         <p id="gathered-text">text :]</p>
         <button id="copy-btn">Copy</button>
         <button id="download-btn">Download</button>
       </div>
       <p class="top-line-instruction">Click on the brain.</p>
       <div class="organ-box-outer">
-        <div id="brain-box" class="organ-box">
+        <div id="brain-box" class="organ-box close-this-box">
           <div class="top-organ-box">
             <span class="organ-name"> Brain: </span>
-            <button id="close-box-button">x</button>
+            <button class="close-box-button">x</button>
           </div>
           <span class="organ-text"> brain blah blah </span>
           <div class="grow-wrap">

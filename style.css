@@ -116,6 +116,7 @@ main {
   width: 90%;
   left: 0;
   right: 0;
+  display: none;
 }
 
 #export-box p {

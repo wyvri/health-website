@@ -18,13 +18,18 @@ brain.onclick = reportClick("click brain", () => {
   box_to_open.style.display = "block";
 });
 
-const x_button = document.getElementById("close-box-button");
-x_button.onclick = reportClick("close brain box", (event) => {
-  const box_to_close = event.target.closest(".organ-box");
-  box_to_close.style.display = "none";
-});
+const x_buttons = document.getElementsByClassName("close-box-button");
+Array.from(x_buttons).forEach(
+  (x) =>
+    (x.onclick = reportClick("close box", (event) => {
+      const box_to_close = event.target.closest(".close-this-box");
+      box_to_close.style.display = "none";
+    }))
+);
 
 const export_button = document.getElementById("export-btn");
 export_button.onclick = reportClick("click export", (event) => {
-  console.log("you exported!")
+  console.log("you exported!");
+  const box_to_open = document.getElementById("export-box");
+  box_to_open.style.display = "block";
 });
